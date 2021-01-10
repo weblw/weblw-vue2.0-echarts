@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "vue-cli-service serve",
+    "add": "plop echarts",
+    "del": "plop delEcharts",
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -28,6 +30,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "plop": "^2.7.4",
     "sass": "^1.32.2",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"

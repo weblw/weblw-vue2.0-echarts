@@ -1,0 +1,47 @@
+<template>
+  <div class="{{name}}-container">
+    <div id="{{name}}">{{compName}}</div>
+  </div>
+</template>
+
+<script>
+const option = {}
+function genOption (data, colors) {
+  option.color = colors
+  return option
+}
+export default {
+  name: '{{compName}}',
+  props: {
+    chartData: {
+      type: Array,
+      default () {
+        return []
+      }
+    },
+    colors: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
+  mounted () {
+    this.chart = this.$echarts.init(document.getElementById('{{name}}'))
+    const option = genOption(this.chartData, this.colors)
+    this.chart.setOption(option)
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.{{name}}-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  #{{name}} {
+    width: 270px;
+    height: 300px;
+  }
+}
+</style>
